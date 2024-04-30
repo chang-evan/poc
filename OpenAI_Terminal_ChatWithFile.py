@@ -12,13 +12,13 @@ class EventHandler(AssistantEventHandler):
   def on_text_created(self, text) -> None:
     print(f"\nassistant > ", end="", flush=True)
 
+empty_thread = client.beta.threads.create()
 
 
 messages=[]
 
 while True:
   userinput = input("User: ")
-  empty_thread = client.beta.threads.create()
 
 
   if userinput.lower() =="exit":
